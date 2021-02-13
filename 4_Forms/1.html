@@ -38,8 +38,8 @@
                 <td>Номер паспорта</td>
             </tr>
             <tr>
-                <td><input type="text" maxlength="2" required size="2" pattern="[A-Z]" ></td>
-                <td><input type="text" maxlength="7" required size="7" pattern="[0-9]{7}" ></td>
+                <td><input type="text" maxlength="2" required size="2" pattern="[A-Z]" name="ser" ></td>
+                <td><input type="text" maxlength="7" required size="7" pattern="[0-9]{7}" name="number"></td>
             </tr>
 
              </table>
@@ -52,7 +52,7 @@
              <table>
             <tr>
                 <td>Год</td>
-                <td><input type="text" maxlength="4" required size="4" pattern="[0-9]{4}" ></td>
+                <td><input type="text" maxlength="4" required size="4" pattern="[0-9]{4}" name="dr"></td>
             </tr>
             <tr>
                 <td>Месяц</td>
@@ -74,7 +74,7 @@
 
             <tr>
                 <td>Число</td>
-                <td><input type="number" size="2" min="1" max="31" step=1></td>
+                <td><input type="number" size="2" min="1" max="31" step=1 name="dr_number" ></td>
             </tr>
              </table>
         </fieldset>
@@ -91,7 +91,7 @@
                 <td>Адрес:</td>
             </tr>
             <tr>
-                <td><input type="text"></td>
+                <td><input type="text" name="adress"></td>
             </tr>
                     </table>
         </fieldset>
