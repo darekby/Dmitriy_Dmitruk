@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>HOW-TO: Программа на Python,Часть 3></h1>
+
+
+     
+    <ul>
+    <LI><a href="img_1.html"><i>Программа на Python часть 1</i></a></LI>
+    <LI><a href="img_2.html"><i>Программа на Python часть 2</i></a></LI>
+    <LI><a href="img_3.html"><i>Программа на Python часть 3</i></a></LI>
+    </ul>
+
+    <h2>Cодержание</h2>
+    <a name="cnt"></a>
+
+
+<h2>
+    HOW-TO: Программа на Python, Часть 3
+</h2>
+
+<ul><LI><a href="#modules"><i>Модули</i></a></LI>
+<LI><a href="#functions"><i>Функции</i></a></LI>
+</ul>
+
+<hr color="grey" size="2">
+
+<p>
+    В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и  <br>  
+присвоение, операторы <strong>if</strong> и <strong>while</strong> Я обещал, что в этой части мы изучим модули и <br>
+функции. Давайте начнём.
+</p>
+
+<h2>Модули</h2>
+<a name="modules"></a>
+
+<p><a href="#cnt">К содержанию</a></p>
+
+<p>Модули предлагают способ расширить программирование на Python. Вы можете создать <br> 
+     свои  модули, использовать те, которые поставляются с Python или которые написали <br> другие. В самом
+    Python есть сотни модулей, которые облегчают написание программ .<br> Список модулей, поставляемых
+    с Python, находится по адресу:<br>
+     <a href="http://docs.python.org/modindex.html"><i> href="http://docs.python.org/modindex.html"</i></a>.
+     Некоторые модули предназначены для определённых <br>
+      операционных систем, но большинство из них кроссплатформенные и работают <br>
+      одинаково на <a href="https://ru.wikipedia.org/wiki/Linux">Linux</a>, 
+    <a href="https://ru.wikipedia.org/wiki/Macintosh">Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows">Microsoft Windows</a>.
+     Для использования внешнего <br>
+      модуля необходимо импортировать его в программу. Один из модулей, поставляемых сPython, <br>
+       называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы<br>
+    используем этот модуль в нашем первом примере.</p>
+
+<Pre>
+#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+    print random.randint(1,10)
+</Pre>
+
+<p>
+    Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых <br>
+мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать<br>
+модуль «random». Мы должны явно указать Python на это.
+</p>
+
+<hr color="grey" size="2">
+
+<h2>Функции</h2>
+<A name="functions"></A>
+<p><a href="#cnt">К содержанию</a></p>
+
+<p>
+    Когда мы импортировали модуль random, мы использовали функцию randint(). Функция <br>
+— это блок кода, который создан для того, чтобы вызывать его в программе, обычно, <br>
+более одного раза. Это упрощает работу над программой и предотвращает набор одного и <br>
+того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код<br>
+больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень<br>
+простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,<br>
+сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и<br>
+результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов<br>
+чисел. Тогда наш пример будет выглядеть как код ниже.
+</p>
+
+<pre>
+#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'
+</pre>
+
+<p>
+    Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при <br>
+написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую <br>
+назовём <strong><i>«DoTwo»</i></strong>. Она будет каждый раз брать два числа, проводить математические <br>
+операции и выводить результат. Начнём с ключевого слова <strong><i>«def»</i></strong>, которое сигнализирует<br>
+о том, что мы собираемся определить функцию. После слова <strong><i>«def»</i></strong> добавим название<br>
+функции и список параметров, если таковые имеются, в круглых скобках. Эту строку<br>
+необходимо завершить двоеточием. Код функции набирается с отступом. Наш<br>
+улучшенный простой пример <strong><U>(No2)</U></strong> показан ниже.
+</p>
+
+<pre>
+#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+    print '%d + %d = %d ' % (num1,num2,num1+num2)
+    print '%d * %d = %d ' % (num1,num2,num1*num2)
+    print '%d - %d = %d ' % (num1,num2,num1-num2)
+    print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)
+</pre>
+
+<p>
+    Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что- <br>
+либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей <br>
+программы. Чтобы вызвать функцию, нужно написать её имя и параметры. 
+</p>
+
+<svg>
+<g
+     id="g696">
+    <path
+       sodipodi:type="arc"
+       style="fill-rule:evenodd;stroke:none;fill:gray;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+       id="path694"
+       d="M 459.652039 252.768921 A 166.534851 157.832336 0 1 0 126.582336,252.768921 A 166.535 157.832 0 1 0 459.652 252.769 L 293.117188 252.768921 z"
+       sodipodi:cx="293.117188"
+       sodipodi:cy="252.768921"
+       sodipodi:rx="166.534851"
+       sodipodi:ry="157.832336"
+       transform="matrix(1.000000,0.000000,0.000000,1.077694,-44.30380,-27.15454)" />
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;"
+       d="M 142.405 178.006 L 302.215 178.006 L 302.215 142.405 L 372.627 229.43 L 303.006 316.456 L 301.424 284.019 L 143.197 283.228 L 142.405 178.006 z "
+       id="path695"
+       sodipodi:nodetypes="cccccccc"
+       transform="trid="svg548"
+       sodipodi:version="0.32"
+       width="400pt"
+       height="400pt"
+       sodipodi:docbase="/home/nicu/svg_gal/arrows"
+       sodipodi:docname="/home/nicu/svg_gal/arrows/arrow07_1.svg"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs
+         id="defs550">
+        <linearGradient
+           id="linearGradient650">
+          <stop
+             style="stop-color:#000;stop-opacity:1;"
+             offset="0"
+             id="stop651" />
+          <stop
+             style="stop-color:#fff;stop-opacity:1;"
+             offset="1"
+             id="stop652" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#linearGradient650"
+           id="linearGradient653"
+           x1="1.00000548"
+           y1="0.53125000"
+           x2="1.16666901"
+           y2="0.53906250"
+           gradientUnits="objectBoundingBox"
+           spreadMethod="repeat" />
+        <linearGradient
+           xlink:href="#linearGradient650"
+           id="linearGradient654"
+           x1="1.22222710"
+           y1="0.46093750"
+           x2="1.16666818"
+           y2="0.46093750"
+           gradientUnits="objectBoundingBox"
+           spreadMethod="repeat" />
+      </defs>
+      <sodipodi:namedview
+         id="base"
+         showgrid="true" />
+      <g
+         id="g696">
+        <path
+           sodipodi:type="arc"
+           style="fill-rule:evenodd;stroke:none;fill:gray;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+           id="path694"
+           d="M 459.652039 252.768921 A 166.534851 157.832336 0 1 0 126.582336,252.768921 A 166.535 157.832 0 1 0 459.652 252.769 L 293.117188 252.768921 z"
+           sodipodi:cx="293.117188"
+           sodipodi:cy="252.768921"
+           sodipodi:rx="166.534851"
+           sodipodi:ry="157.832336"
+           transform="matrix(1.000000,0.000000,0.000000,1.077694,-44.30380,-27.15454)" />
+        <path
+           style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;"
+           d="M 142.405 178.006 L 302.215 178.006 L 302.215 142.405 L 372.627 229.43 L 303.006 316.456 L 301.424 284.019 L 143.197 283.228 L 142.405 178.006 z "
+           id="path695"
+           sodipodi:nodetypes="cccccccc"
+           transform="translate(-1.582279,15.03162)" />
+      </g>
+    
+      <rdf:RDF 
+       xmlns="http://web.resource.org/cc/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <Work rdf:about="">
+        <dc:title>Clipart by Nicu Buculei - arrow08_4</dc:title>
+        <dc:rights>
+           <Agent>
+             <dc:title>Nicu Buculei</dc:title>
+           </Agent>
+        </dc:rights>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <license rdf:resource="http://web.resource.org/cc/PublicDomain" />
+      </Work>
+       
+      <License rdf:about="http://web.resource.org/cc/PublicDomain">
+         <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+         <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+         <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </License>
+    
+    </rdf:RDF>
+</svg>
+
+
+ 
+
+</body>
+</html>
