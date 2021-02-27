@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Document</title>
+    <style>
+       
+    
+    div.menu_1 > div { 
+        background-color:turquoise; 
+        border: solid grey 1px; 
+        position: relative ; 
+        cursor: pointer; 
+        display: inline-block; 
+        width: 100px;
+     }
+    div.menu_2 { 
+        height: 0; 
+        overflow:hidden;
+        transition: 1s;
+         
+    }
+    div.menu_2 > div { 
+        background-color:lawngreen ; 
+        border: solid grey 1px; 
+        cursor: pointer;
+     }
+    div.menu_1 > div:hover div.menu_2 {
+        height: 100px;
+        display:inline-block; 
+        position: absolute; 
+        left: 80%; 
+        top: 90%; 
+        z-index: 1;
+    }
+
+    </style>
+    </head>
+
+<body>
+    <div class='menu_1'>
+        <div>
+            Понедельник
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>
+            Вторник
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>
+            Среда
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>
+            Четверг
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>
+            Пятница
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>
+            Суббота
+            <div class='menu_2'>
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        
+    
+    </div>
+</body>
+</html>

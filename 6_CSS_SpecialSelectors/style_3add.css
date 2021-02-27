@@ -1,0 +1,26 @@
+tbody{
+    counter-reset: tdNumber 65 ; 
+}
+table.chess {
+margin: 60px auto;
+background: white;
+color: black;
+border: 2px solid black;
+border-collapse: collapse; 
+}
+    td.chess {
+width: 50px; height: 50px;
+border: 2px solid black;
+counter-increment: tdNumber -1;
+color: black;
+text-align: center;
+font-size: 30px;
+}
+td.chess::before{
+    content: counter(tdNumber);
+}
+tr.chess:nth-child(odd) td.chess:nth-child(even),
+tr.chess:nth-child(even) td.chess:nth-child(odd) {
+background: black;
+color: white;
+}

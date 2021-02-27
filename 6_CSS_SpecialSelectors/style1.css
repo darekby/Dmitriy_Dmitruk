@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+     padding: 0;
+}
+p{
+    text-indent:2em;
+    border:1px outset #666;
+    border-radius:1em/2em  0;
+    margin: 5px;
+}
+a[target="_blank"]{
+    background: url(pic/extref.png) no-repeat 0 5px;
+    padding-left: 13px;
+}
+li::before{
+    content: url(pic/logo-list.jpg)
+}
+a[href$=".doc"]{
+    background: url(pic/logo-doc.jpg) no-repeat 0 5px;
+    background-position: right;
+    padding-right: 25px;
+}
+a[href$=".pdf"]{
+    background: url(pic/logo-pdf.png) no-repeat 0 5px;
+    background-position: right;
+    padding-right: 25px;
+}
+a[href$=".zip"]{
+    background: url(pic/logo-zip.gif) no-repeat 0 5px;
+    background-position: right;
+    padding-right: 25px;
+}
