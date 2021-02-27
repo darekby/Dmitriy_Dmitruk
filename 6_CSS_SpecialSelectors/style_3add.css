@@ -1,5 +1,5 @@
 tbody{
-    counter-reset: tdNumber 65 ; 
+     
 }
 table.chess {
 margin: 60px auto;
@@ -7,10 +7,12 @@ background: white;
 color: black;
 border: 2px solid black;
 border-collapse: collapse; 
+counter-reset: tdNumber 65
 }
     td.chess {
 width: 50px; height: 50px;
 border: 2px solid black;
+
 counter-increment: tdNumber -1;
 color: black;
 text-align: center;
